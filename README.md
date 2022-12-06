@@ -1,4 +1,4 @@
-# Rogue-Like - Untitled Pirate Game
+# Untitled Pirate Game
 
 # Summary
 A Top-Down/Rogue-Like/Adventure/Bullet-hell game, where you play as a pirate I guess. 
