@@ -4,24 +4,24 @@ using UnityEngine.Events;
 
 namespace Event_System
 {
-    public class GameEventListener : MonoBehaviour
-    {
-        public GameEvent gameEvent;
-        public UnityEvent response;
-
-        private void OnEnable()
+        public class GameEventListener : MonoBehaviour
         {
-            gameEvent.RegisterGameEvent(this);
-        }
+                public GameEvent gameEvent;
+                public UnityEvent response;
 
-        private void OnDisable()
-        {
-            gameEvent.UnregisterGameEvent(this);
-        }
+                private void OnEnable()
+                {
+                        gameEvent.RegisterGameEvent(this);
+                }
 
-        public void OnEventRaised()
-        {
-            response.Invoke();
+                private void OnDisable()
+                {
+                        gameEvent.UnregisterGameEvent(this);
+                }
+
+                public void OnEventRaised()
+                {
+                        response.Invoke();
+                }
         }
-    }
 }

@@ -4,21 +4,22 @@ using UnityEngine;
 
 namespace Player
 {
-    [RequireComponent(typeof(Animator))]
-    public class AnimationController : MonoBehaviour
-    {
-        private Animator _playerAnimator;
-
-        
-        private void Awake()
+        [RequireComponent(typeof(Animator))]
+        public class AnimationController : MonoBehaviour
         {
-            _playerAnimator ??= GetComponent<Animator>();
-        }
+                private Animator _playerAnimator;
 
-        [SerializeField] private BoolRef isMoving;
-        private void Update()
-        {
-            _playerAnimator.SetBool("isMoving",isMoving.Value);
+
+                private void Awake()
+                {
+                        _playerAnimator ??= GetComponent<Animator>();
+                }
+
+                [SerializeField] private BoolRef isMoving;
+
+                private void Update()
+                {
+                        _playerAnimator.SetBool("isMoving", isMoving.Value);
+                }
         }
-    }
 }
